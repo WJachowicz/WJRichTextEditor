@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EE76C3716FF8B9000BA69E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE76C3616FF8B9000BA69E3 /* UIKit.framework */; };
+		7EE76C3916FF8B9000BA69E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE76C3816FF8B9000BA69E3 /* Foundation.framework */; };
+		7EE76C3B16FF8B9000BA69E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE76C3A16FF8B9000BA69E3 /* CoreGraphics.framework */; };
+		7EE76C4116FF8B9000BA69E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C3F16FF8B9000BA69E3 /* InfoPlist.strings */; };
+		7EE76C4316FF8B9000BA69E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C4216FF8B9000BA69E3 /* main.m */; };
+		7EE76C4716FF8B9000BA69E3 /* WJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C4616FF8B9000BA69E3 /* WJAppDelegate.m */; };
+		7EE76C4916FF8B9000BA69E3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C4816FF8B9000BA69E3 /* Default.png */; };
+		7EE76C4B16FF8B9000BA69E3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C4A16FF8B9000BA69E3 /* Default@2x.png */; };
+		7EE76C4D16FF8B9000BA69E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C4C16FF8B9000BA69E3 /* Default-568h@2x.png */; };
+		7EE76C5016FF8B9000BA69E3 /* WJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */; };
+		7EE76C5316FF8B9000BA69E3 /* WJViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C5116FF8B9000BA69E3 /* WJViewController_iPhone.xib */; };
+		7EE76C5616FF8B9000BA69E3 /* WJViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C5416FF8B9000BA69E3 /* WJViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7EE76C3316FF8B9000BA69E3 /* WJRichTextEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJRichTextEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE76C3616FF8B9000BA69E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7EE76C3816FF8B9000BA69E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EE76C3A16FF8B9000BA69E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7EE76C3E16FF8B9000BA69E3 /* WJRichTextEditor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WJRichTextEditor-Info.plist"; sourceTree = "<group>"; };
+		7EE76C4016FF8B9000BA69E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EE76C4216FF8B9000BA69E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EE76C4416FF8B9000BA69E3 /* WJRichTextEditor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WJRichTextEditor-Prefix.pch"; sourceTree = "<group>"; };
+		7EE76C4516FF8B9000BA69E3 /* WJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJAppDelegate.h; sourceTree = "<group>"; };
+		7EE76C4616FF8B9000BA69E3 /* WJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJAppDelegate.m; sourceTree = "<group>"; };
+		7EE76C4816FF8B9000BA69E3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7EE76C4A16FF8B9000BA69E3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7EE76C4C16FF8B9000BA69E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7EE76C4E16FF8B9000BA69E3 /* WJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJViewController.h; sourceTree = "<group>"; };
+		7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJViewController.m; sourceTree = "<group>"; };
+		7EE76C5216FF8B9000BA69E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WJViewController_iPhone.xib; sourceTree = "<group>"; };
+		7EE76C5516FF8B9000BA69E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WJViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EE76C3016FF8B9000BA69E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE76C3716FF8B9000BA69E3 /* UIKit.framework in Frameworks */,
+				7EE76C3916FF8B9000BA69E3 /* Foundation.framework in Frameworks */,
+				7EE76C3B16FF8B9000BA69E3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EE76C2A16FF8B9000BA69E3 = {
+			isa = PBXGroup;
+			children = (
+				7EE76C3C16FF8B9000BA69E3 /* WJRichTextEditor */,
+				7EE76C3516FF8B9000BA69E3 /* Frameworks */,
+				7EE76C3416FF8B9000BA69E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EE76C3416FF8B9000BA69E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EE76C3316FF8B9000BA69E3 /* WJRichTextEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EE76C3516FF8B9000BA69E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EE76C3616FF8B9000BA69E3 /* UIKit.framework */,
+				7EE76C3816FF8B9000BA69E3 /* Foundation.framework */,
+				7EE76C3A16FF8B9000BA69E3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EE76C3C16FF8B9000BA69E3 /* WJRichTextEditor */ = {
+			isa = PBXGroup;
+			children = (
+				7EE76C4516FF8B9000BA69E3 /* WJAppDelegate.h */,
+				7EE76C4616FF8B9000BA69E3 /* WJAppDelegate.m */,
+				7EE76C4E16FF8B9000BA69E3 /* WJViewController.h */,
+				7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */,
+				7EE76C5116FF8B9000BA69E3 /* WJViewController_iPhone.xib */,
+				7EE76C5416FF8B9000BA69E3 /* WJViewController_iPad.xib */,
+				7EE76C3D16FF8B9000BA69E3 /* Supporting Files */,
+			);
+			path = WJRichTextEditor;
+			sourceTree = "<group>";
+		};
+		7EE76C3D16FF8B9000BA69E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EE76C3E16FF8B9000BA69E3 /* WJRichTextEditor-Info.plist */,
+				7EE76C3F16FF8B9000BA69E3 /* InfoPlist.strings */,
+				7EE76C4216FF8B9000BA69E3 /* main.m */,
+				7EE76C4416FF8B9000BA69E3 /* WJRichTextEditor-Prefix.pch */,
+				7EE76C4816FF8B9000BA69E3 /* Default.png */,
+				7EE76C4A16FF8B9000BA69E3 /* Default@2x.png */,
+				7EE76C4C16FF8B9000BA69E3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EE76C3216FF8B9000BA69E3 /* WJRichTextEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EE76C5916FF8B9000BA69E3 /* Build configuration list for PBXNativeTarget "WJRichTextEditor" */;
+			buildPhases = (
+				7EE76C2F16FF8B9000BA69E3 /* Sources */,
+				7EE76C3016FF8B9000BA69E3 /* Frameworks */,
+				7EE76C3116FF8B9000BA69E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WJRichTextEditor;
+			productName = WJRichTextEditor;
+			productReference = 7EE76C3316FF8B9000BA69E3 /* WJRichTextEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EE76C2B16FF8B9000BA69E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WJ;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Wojciech Jachowicz";
+			};
+			buildConfigurationList = 7EE76C2E16FF8B9000BA69E3 /* Build configuration list for PBXProject "WJRichTextEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EE76C2A16FF8B9000BA69E3;
+			productRefGroup = 7EE76C3416FF8B9000BA69E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EE76C3216FF8B9000BA69E3 /* WJRichTextEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EE76C3116FF8B9000BA69E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE76C4116FF8B9000BA69E3 /* InfoPlist.strings in Resources */,
+				7EE76C4916FF8B9000BA69E3 /* Default.png in Resources */,
+				7EE76C4B16FF8B9000BA69E3 /* Default@2x.png in Resources */,
+				7EE76C4D16FF8B9000BA69E3 /* Default-568h@2x.png in Resources */,
+				7EE76C5316FF8B9000BA69E3 /* WJViewController_iPhone.xib in Resources */,
+				7EE76C5616FF8B9000BA69E3 /* WJViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EE76C2F16FF8B9000BA69E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE76C4316FF8B9000BA69E3 /* main.m in Sources */,
+				7EE76C4716FF8B9000BA69E3 /* WJAppDelegate.m in Sources */,
+				7EE76C5016FF8B9000BA69E3 /* WJViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7EE76C3F16FF8B9000BA69E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EE76C4016FF8B9000BA69E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7EE76C5116FF8B9000BA69E3 /* WJViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EE76C5216FF8B9000BA69E3 /* en */,
+			);
+			name = WJViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		7EE76C5416FF8B9000BA69E3 /* WJViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EE76C5516FF8B9000BA69E3 /* en */,
+			);
+			name = WJViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EE76C5716FF8B9000BA69E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EE76C5816FF8B9000BA69E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EE76C5A16FF8B9000BA69E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJRichTextEditor/WJRichTextEditor-Prefix.pch";
+				INFOPLIST_FILE = "WJRichTextEditor/WJRichTextEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7EE76C5B16FF8B9000BA69E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WJRichTextEditor/WJRichTextEditor-Prefix.pch";
+				INFOPLIST_FILE = "WJRichTextEditor/WJRichTextEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EE76C2E16FF8B9000BA69E3 /* Build configuration list for PBXProject "WJRichTextEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EE76C5716FF8B9000BA69E3 /* Debug */,
+				7EE76C5816FF8B9000BA69E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EE76C5916FF8B9000BA69E3 /* Build configuration list for PBXNativeTarget "WJRichTextEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EE76C5A16FF8B9000BA69E3 /* Debug */,
+				7EE76C5B16FF8B9000BA69E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EE76C2B16FF8B9000BA69E3 /* Project object */;
+}
