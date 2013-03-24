@@ -17,8 +17,7 @@
 		7EE76C4B16FF8B9000BA69E3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C4A16FF8B9000BA69E3 /* Default@2x.png */; };
 		7EE76C4D16FF8B9000BA69E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C4C16FF8B9000BA69E3 /* Default-568h@2x.png */; };
 		7EE76C5016FF8B9000BA69E3 /* WJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */; };
-		7EE76C5316FF8B9000BA69E3 /* WJViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C5116FF8B9000BA69E3 /* WJViewController_iPhone.xib */; };
-		7EE76C5616FF8B9000BA69E3 /* WJViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C5416FF8B9000BA69E3 /* WJViewController_iPad.xib */; };
+		7EE76C5F16FF8BEB00BA69E3 /* WJRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +36,8 @@
 		7EE76C4C16FF8B9000BA69E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7EE76C4E16FF8B9000BA69E3 /* WJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJViewController.h; sourceTree = "<group>"; };
 		7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJViewController.m; sourceTree = "<group>"; };
-		7EE76C5216FF8B9000BA69E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WJViewController_iPhone.xib; sourceTree = "<group>"; };
-		7EE76C5516FF8B9000BA69E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WJViewController_iPad.xib; sourceTree = "<group>"; };
+		7EE76C5D16FF8BEB00BA69E3 /* WJRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJRichTextView.h; sourceTree = "<group>"; };
+		7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJRichTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +84,11 @@
 		7EE76C3C16FF8B9000BA69E3 /* WJRichTextEditor */ = {
 			isa = PBXGroup;
 			children = (
+				7EE76C5C16FF8BAD00BA69E3 /* lib */,
 				7EE76C4516FF8B9000BA69E3 /* WJAppDelegate.h */,
 				7EE76C4616FF8B9000BA69E3 /* WJAppDelegate.m */,
 				7EE76C4E16FF8B9000BA69E3 /* WJViewController.h */,
 				7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */,
-				7EE76C5116FF8B9000BA69E3 /* WJViewController_iPhone.xib */,
-				7EE76C5416FF8B9000BA69E3 /* WJViewController_iPad.xib */,
 				7EE76C3D16FF8B9000BA69E3 /* Supporting Files */,
 			);
 			path = WJRichTextEditor;
@@ -108,6 +106,15 @@
 				7EE76C4C16FF8B9000BA69E3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EE76C5C16FF8BAD00BA69E3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7EE76C5D16FF8BEB00BA69E3 /* WJRichTextView.h */,
+				7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +173,6 @@
 				7EE76C4916FF8B9000BA69E3 /* Default.png in Resources */,
 				7EE76C4B16FF8B9000BA69E3 /* Default@2x.png in Resources */,
 				7EE76C4D16FF8B9000BA69E3 /* Default-568h@2x.png in Resources */,
-				7EE76C5316FF8B9000BA69E3 /* WJViewController_iPhone.xib in Resources */,
-				7EE76C5616FF8B9000BA69E3 /* WJViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +186,7 @@
 				7EE76C4316FF8B9000BA69E3 /* main.m in Sources */,
 				7EE76C4716FF8B9000BA69E3 /* WJAppDelegate.m in Sources */,
 				7EE76C5016FF8B9000BA69E3 /* WJViewController.m in Sources */,
+				7EE76C5F16FF8BEB00BA69E3 /* WJRichTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,22 +199,6 @@
 				7EE76C4016FF8B9000BA69E3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7EE76C5116FF8B9000BA69E3 /* WJViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EE76C5216FF8B9000BA69E3 /* en */,
-			);
-			name = WJViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		7EE76C5416FF8B9000BA69E3 /* WJViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EE76C5516FF8B9000BA69E3 /* en */,
-			);
-			name = WJViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -311,6 +301,7 @@
 				7EE76C5B16FF8B9000BA69E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

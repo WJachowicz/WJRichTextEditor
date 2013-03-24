@@ -1,5 +1,5 @@
 //
-//  WJViewController.h
+//  WJRichTextView.h
 //  WJRichTextEditor
 //
 //  Created by Wojciech Jachowicz on 24.03.2013.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WJRichTextView.h"
-@interface WJViewController : UIViewController
 
+@interface WJRichTextView : UIWebView
+
+-(void) loadString:(NSString *) string;
 @end
