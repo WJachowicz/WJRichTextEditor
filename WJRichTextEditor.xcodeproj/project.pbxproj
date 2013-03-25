@@ -18,6 +18,8 @@
 		7EE76C4D16FF8B9000BA69E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C4C16FF8B9000BA69E3 /* Default-568h@2x.png */; };
 		7EE76C5016FF8B9000BA69E3 /* WJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */; };
 		7EE76C5F16FF8BEB00BA69E3 /* WJRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */; };
+		7EE76C691700E29A00BA69E3 /* rich_text_edit.js in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C681700E29A00BA69E3 /* rich_text_edit.js */; };
+		7EE76C6A1700E2A600BA69E3 /* rich_text_edit.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C681700E29A00BA69E3 /* rich_text_edit.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,7 @@
 		7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJViewController.m; sourceTree = "<group>"; };
 		7EE76C5D16FF8BEB00BA69E3 /* WJRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJRichTextView.h; sourceTree = "<group>"; };
 		7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJRichTextView.m; sourceTree = "<group>"; };
+		7EE76C681700E29A00BA69E3 /* rich_text_edit.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rich_text_edit.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 			children = (
 				7EE76C5D16FF8BEB00BA69E3 /* WJRichTextView.h */,
 				7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */,
+				7EE76C681700E29A00BA69E3 /* rich_text_edit.js */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -171,6 +175,7 @@
 			files = (
 				7EE76C4116FF8B9000BA69E3 /* InfoPlist.strings in Resources */,
 				7EE76C4916FF8B9000BA69E3 /* Default.png in Resources */,
+				7EE76C6A1700E2A600BA69E3 /* rich_text_edit.js in Resources */,
 				7EE76C4B16FF8B9000BA69E3 /* Default@2x.png in Resources */,
 				7EE76C4D16FF8B9000BA69E3 /* Default-568h@2x.png in Resources */,
 			);
@@ -187,6 +192,7 @@
 				7EE76C4716FF8B9000BA69E3 /* WJAppDelegate.m in Sources */,
 				7EE76C5016FF8B9000BA69E3 /* WJViewController.m in Sources */,
 				7EE76C5F16FF8BEB00BA69E3 /* WJRichTextView.m in Sources */,
+				7EE76C691700E29A00BA69E3 /* rich_text_edit.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

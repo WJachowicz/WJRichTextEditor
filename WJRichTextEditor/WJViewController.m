@@ -21,7 +21,42 @@
     self.richTextView = [[[WJRichTextView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)] autorelease];
     [self.view addSubview:_richTextView];
     [_richTextView loadString:@"Test"];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self defineBarButtonItems];
+}
+
+-(void) defineBarButtonItems
+{
+    NSMutableArray * items = [NSMutableArray array];
+    UIBarButtonItem * btnBold = [[UIBarButtonItem alloc] initWithTitle:@"B" style:UIBarButtonItemStyleBordered target:self action:@selector(onBoldSelected:)];
+    UIBarButtonItem * btnItalic = [[UIBarButtonItem alloc] initWithTitle:@"I" style:UIBarButtonItemStyleBordered target:self action:@selector(onItalicSelected:)];
+    UIBarButtonItem * btnUnderline = [[UIBarButtonItem alloc] initWithTitle:@"U" style:UIBarButtonItemStyleBordered target:self action:@selector(onUnderlineSelected:)];
+    
+    [items addObject:btnBold];
+    [items addObject:btnItalic];
+    [items addObject:btnUnderline];
+    
+    [btnBold release];
+    [btnItalic release];
+    [btnUnderline release];
+    
+    self.navigationItem.leftBarButtonItems = items;
+}
+
+#pragma mark - BarButtonItems actions
+
+-(void) onBoldSelected:(id) sender
+{
+    [_richTextView bold];
+}
+
+-(void) onItalicSelected:(id) sender
+{
+    [_richTextView italic];
+}
+
+-(void) onUnderlineSelected:(id) sender
+{
+    [_richTextView underline];
 }
 
 - (void)didReceiveMemoryWarning

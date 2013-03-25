@@ -22,8 +22,36 @@
 -(void) loadString:(NSString *)string
 {
     [self loadHTMLString:[NSString stringWithFormat:HTML_CONTENT, string] baseURL:nil];
+    [self loadJS];
 }
 
+-(void) loadJS
+{
+    NSString * filePath = [[NSBundle mainBundle] pathForResource:@"rich_text_edit" ofType:@"js"];
+    if (filePath) {
+        NSError * error = nil;
+        NSString * content = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+        if (!error) {
+            [self stringByEvaluatingJavaScriptFromString:content];
+        }
+        else{
+            NSLog(@"error: %@",[error localizedDescription]);
+        }
+    }
+}
+
+-(void) bold
+{
+    [self stringByEvaluatingJavaScriptFromString:@"bold()"];
+}
+-(void) italic
+{
+    [self stringByEvaluatingJavaScriptFromString:@"italic()"];
+}
+-(void) underline
+{
+    [self stringByEvaluatingJavaScriptFromString:@"underline()"];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

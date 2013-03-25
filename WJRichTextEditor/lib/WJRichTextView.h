@@ -11,4 +11,7 @@
 @interface WJRichTextView : UIWebView
 
 -(void) loadString:(NSString *) string;
+-(void) bold;
+-(void) italic;
+-(void) underline;
 @end
