@@ -8,13 +8,18 @@
 
 #import "WJViewController.h"
 
+#define ACTION_FONT_TYPE 1
+#define ACTION_FONT_COLOR 2
 
 @interface WJViewController ()
+
 @property(nonatomic, retain) WJRichTextView * richTextView;
+@property(nonatomic, retain) UIActionSheet * actionSheet;
 @end
 
 @implementation WJViewController
 @synthesize richTextView = _richTextView;
+@synthesize actionSheet = _actionSheet;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,14 +35,20 @@
     UIBarButtonItem * btnBold = [[UIBarButtonItem alloc] initWithTitle:@"B" style:UIBarButtonItemStyleBordered target:self action:@selector(onBoldSelected:)];
     UIBarButtonItem * btnItalic = [[UIBarButtonItem alloc] initWithTitle:@"I" style:UIBarButtonItemStyleBordered target:self action:@selector(onItalicSelected:)];
     UIBarButtonItem * btnUnderline = [[UIBarButtonItem alloc] initWithTitle:@"U" style:UIBarButtonItemStyleBordered target:self action:@selector(onUnderlineSelected:)];
+    UIBarButtonItem * btnFont = [[UIBarButtonItem alloc] initWithTitle:@"Font" style:UIBarButtonItemStyleBordered target:self action:@selector(onFontSelected:)];
+    UIBarButtonItem * btnSize = [[UIBarButtonItem alloc] initWithTitle:@"Size" style:UIBarButtonItemStyleBordered target:self action:@selector(onSizeSelected:)];
     
     [items addObject:btnBold];
     [items addObject:btnItalic];
     [items addObject:btnUnderline];
+    [items addObject:btnFont];
+    [items addObject:btnSize];
     
     [btnBold release];
     [btnItalic release];
     [btnUnderline release];
+    [btnFont release];
+    [btnSize release];
     
     self.navigationItem.leftBarButtonItems = items;
 }
@@ -46,17 +57,57 @@
 
 -(void) onBoldSelected:(id) sender
 {
+    [self dismissPopovers];
     [_richTextView bold];
 }
 
 -(void) onItalicSelected:(id) sender
 {
+    [self dismissPopovers];
     [_richTextView italic];
 }
 
 -(void) onUnderlineSelected:(id) sender
 {
+    [self dismissPopovers];
     [_richTextView underline];
+}
+
+-(void) onFontSelected:(id) sender{
+    if (!_actionSheet) {
+        self.actionSheet = [[UIActionSheet alloc] initWithTitle:@"Font" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Arial",@"Courier",@"Times New Roman", nil];
+        _actionSheet.tag = ACTION_FONT_TYPE;
+        [_actionSheet showFromBarButtonItem:(UIBarButtonItem *)sender animated:YES];
+        [_actionSheet release];
+    }
+}
+-(void) onSizeSelected:(id) sender{
+    
+}
+
+-(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(actionSheet.tag == ACTION_FONT_TYPE)
+    {
+        NSString * font = [actionSheet buttonTitleAtIndex:buttonIndex];
+        [_richTextView changeFontType:font];
+    }
+}
+
+-(void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    self.actionSheet = nil;
+}
+
+-(void) dismissPopovers
+{
+    if (_actionSheet) {
+        [_actionSheet dismissWithClickedButtonIndex:0 animated:NO];
+    }
+//    if (_popover) {
+//        [_popover dismissPopoverAnimated:NO];
+//        self.popover = nil;
+//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,6 +118,7 @@
 
 -(void) dealloc
 {
+    self.actionSheet = nil;
     self.richTextView = nil;
     [super dealloc];
 }

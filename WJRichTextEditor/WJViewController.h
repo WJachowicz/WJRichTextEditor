@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WJRichTextView.h"
-@interface WJViewController : UIViewController
+
+@interface WJViewController : UIViewController<UIActionSheetDelegate>
 
 @end

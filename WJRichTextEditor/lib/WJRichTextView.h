@@ -14,4 +14,6 @@
 -(void) bold;
 -(void) italic;
 -(void) underline;
+-(void) changeFontType:(NSString *) fontName;
+-(void) changeFontSize:(int) fontSize;
 @end

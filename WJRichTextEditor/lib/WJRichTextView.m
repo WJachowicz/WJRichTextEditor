@@ -42,15 +42,24 @@
 
 -(void) bold
 {
-    [self stringByEvaluatingJavaScriptFromString:@"bold()"];
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.bold()"];
 }
 -(void) italic
 {
-    [self stringByEvaluatingJavaScriptFromString:@"italic()"];
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.italic()"];
 }
 -(void) underline
 {
-    [self stringByEvaluatingJavaScriptFromString:@"underline()"];
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.underline()"];
+}
+-(void) changeFontType:(NSString *)fontName
+{
+    NSString * cmd = [NSString stringWithFormat:@"WJ.changeFontType('%@')",fontName];
+    [self stringByEvaluatingJavaScriptFromString:cmd];
+}
+-(void) changeFontSize:(int)fontSize{
+    NSString * cmd = [NSString stringWithFormat:@"WJ.changeFontSize(%i)",fontSize];
+    [self stringByEvaluatingJavaScriptFromString:cmd];
 }
 /*
 // Only override drawRect: if you perform custom drawing.
