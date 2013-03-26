@@ -15,11 +15,13 @@
 
 @property(nonatomic, retain) WJRichTextView * richTextView;
 @property(nonatomic, retain) UIActionSheet * actionSheet;
+@property(nonatomic, retain) UIPopoverController * popover;
 @end
 
 @implementation WJViewController
 @synthesize richTextView = _richTextView;
 @synthesize actionSheet = _actionSheet;
+@synthesize popover = _popover;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -82,7 +84,17 @@
     }
 }
 -(void) onSizeSelected:(id) sender{
-    
+    if (!_popover) {
+        [self dismissPopovers];
+        WJFontSizeViewController * fontSizeViewController = [[WJFontSizeViewController alloc] init];
+        fontSizeViewController.delegate = self;
+        fontSizeViewController.contentSizeForViewInPopover = fontSizeViewController.view.frame.size;
+        self.popover = [[UIPopoverController alloc] initWithContentViewController:fontSizeViewController];
+        _popover.delegate = self;
+        [fontSizeViewController release];
+        [_popover presentPopoverFromBarButtonItem:(UIBarButtonItem *) sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        [_popover release];
+    }
 }
 
 -(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -99,15 +111,25 @@
     self.actionSheet = nil;
 }
 
+-(void) popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
+    self.popover = nil;
+}
+-(void) didSelectFontSize:(int)fontSize
+{
+    [_richTextView changeFontSize:fontSize];
+//    [_popover dismissPopoverAnimated:YES];
+//    self.popover = nil;
+}
+
 -(void) dismissPopovers
 {
     if (_actionSheet) {
         [_actionSheet dismissWithClickedButtonIndex:0 animated:NO];
     }
-//    if (_popover) {
-//        [_popover dismissPopoverAnimated:NO];
-//        self.popover = nil;
-//    }
+    if (_popover) {
+        [_popover dismissPopoverAnimated:NO];
+        self.popover = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning

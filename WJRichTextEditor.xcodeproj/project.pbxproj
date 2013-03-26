@@ -20,6 +20,7 @@
 		7EE76C5F16FF8BEB00BA69E3 /* WJRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */; };
 		7EE76C691700E29A00BA69E3 /* rich_text_edit.js in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C681700E29A00BA69E3 /* rich_text_edit.js */; };
 		7EE76C6A1700E2A600BA69E3 /* rich_text_edit.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EE76C681700E29A00BA69E3 /* rich_text_edit.js */; };
+		7EE76C6D170249CB00BA69E3 /* WJFontSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE76C6C170249CB00BA69E3 /* WJFontSizeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		7EE76C5D16FF8BEB00BA69E3 /* WJRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJRichTextView.h; sourceTree = "<group>"; };
 		7EE76C5E16FF8BEB00BA69E3 /* WJRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJRichTextView.m; sourceTree = "<group>"; };
 		7EE76C681700E29A00BA69E3 /* rich_text_edit.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rich_text_edit.js; sourceTree = "<group>"; };
+		7EE76C6B170249CB00BA69E3 /* WJFontSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFontSizeViewController.h; sourceTree = "<group>"; };
+		7EE76C6C170249CB00BA69E3 /* WJFontSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJFontSizeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				7EE76C4616FF8B9000BA69E3 /* WJAppDelegate.m */,
 				7EE76C4E16FF8B9000BA69E3 /* WJViewController.h */,
 				7EE76C4F16FF8B9000BA69E3 /* WJViewController.m */,
+				7EE76C6B170249CB00BA69E3 /* WJFontSizeViewController.h */,
+				7EE76C6C170249CB00BA69E3 /* WJFontSizeViewController.m */,
 				7EE76C3D16FF8B9000BA69E3 /* Supporting Files */,
 			);
 			path = WJRichTextEditor;
@@ -193,6 +198,7 @@
 				7EE76C5016FF8B9000BA69E3 /* WJViewController.m in Sources */,
 				7EE76C5F16FF8BEB00BA69E3 /* WJRichTextView.m in Sources */,
 				7EE76C691700E29A00BA69E3 /* rich_text_edit.js in Sources */,
+				7EE76C6D170249CB00BA69E3 /* WJFontSizeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

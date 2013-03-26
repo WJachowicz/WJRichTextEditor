@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "WJRichTextView.h"
+#import "WJFontSizeViewController.h"
 
-@interface WJViewController : UIViewController<UIActionSheetDelegate>
+@interface WJViewController : UIViewController<UIActionSheetDelegate, WJFontSizeViewControllerDelegate, UIPopoverControllerDelegate>
 
 @end
