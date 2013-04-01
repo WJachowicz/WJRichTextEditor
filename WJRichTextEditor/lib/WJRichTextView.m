@@ -61,6 +61,16 @@
     NSString * cmd = [NSString stringWithFormat:@"WJ.changeFontSize(%i)",fontSize];
     [self stringByEvaluatingJavaScriptFromString:cmd];
 }
+-(void) justifyLeft{
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.justifyLeft()"];
+}
+-(void) justifyCenter{
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.justifyCenter()"];
+}
+-(void) justifyRight{
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.justifyRight()"];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

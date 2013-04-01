@@ -16,4 +16,7 @@
 -(void) underline;
 -(void) changeFontType:(NSString *) fontName;
 -(void) changeFontSize:(int) fontSize;
+-(void) justifyLeft;
+-(void) justifyCenter;
+-(void) justifyRight;
 @end

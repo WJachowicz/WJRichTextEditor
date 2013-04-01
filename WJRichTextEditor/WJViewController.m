@@ -25,7 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.richTextView = [[[WJRichTextView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)] autorelease];
+    self.richTextView = [[[WJRichTextView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)] autorelease];
+    self.richTextView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:_richTextView];
     [_richTextView loadString:@"Test"];
     [self defineBarButtonItems];
@@ -37,12 +38,25 @@
     UIBarButtonItem * btnBold = [[UIBarButtonItem alloc] initWithTitle:@"B" style:UIBarButtonItemStyleBordered target:self action:@selector(onBoldSelected:)];
     UIBarButtonItem * btnItalic = [[UIBarButtonItem alloc] initWithTitle:@"I" style:UIBarButtonItemStyleBordered target:self action:@selector(onItalicSelected:)];
     UIBarButtonItem * btnUnderline = [[UIBarButtonItem alloc] initWithTitle:@"U" style:UIBarButtonItemStyleBordered target:self action:@selector(onUnderlineSelected:)];
+    UIBarButtonItem * flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIBarButtonItem * btnFont = [[UIBarButtonItem alloc] initWithTitle:@"Font" style:UIBarButtonItemStyleBordered target:self action:@selector(onFontSelected:)];
     UIBarButtonItem * btnSize = [[UIBarButtonItem alloc] initWithTitle:@"Size" style:UIBarButtonItemStyleBordered target:self action:@selector(onSizeSelected:)];
+    UIBarButtonItem * btnLeft = [[UIBarButtonItem alloc] initWithTitle:@"Left" style:UIBarButtonItemStyleBordered target:self action:@selector(onLeftSelected:)];
+    UIBarButtonItem * btnCenter = [[UIBarButtonItem alloc] initWithTitle:@"Center" style:UIBarButtonItemStyleBordered target:self action:@selector(onCenterSelected:)];
+    UIBarButtonItem * btnRight = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStyleBordered target:self action:@selector(onRightSelected:)];
     
     [items addObject:btnBold];
     [items addObject:btnItalic];
     [items addObject:btnUnderline];
+    
+    [items addObject:flexibleSpace];
+    
+    [items addObject:btnLeft];
+    [items addObject:btnCenter];
+    [items addObject:btnRight];
+    
+    [items addObject:flexibleSpace];
+    
     [items addObject:btnFont];
     [items addObject:btnSize];
     
@@ -51,6 +65,11 @@
     [btnUnderline release];
     [btnFont release];
     [btnSize release];
+    [btnLeft release];
+    [btnCenter release];
+    [btnRight release];
+    [flexibleSpace release];
+    
     
     self.navigationItem.leftBarButtonItems = items;
 }
@@ -95,6 +114,21 @@
         [_popover presentPopoverFromBarButtonItem:(UIBarButtonItem *) sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         [_popover release];
     }
+}
+
+-(void) onLeftSelected:(id) sender{
+    [self dismissPopovers];
+    [_richTextView justifyLeft];
+}
+
+-(void) onCenterSelected:(id) sender{
+    [self dismissPopovers];
+    [_richTextView justifyCenter];
+    
+}
+-(void) onRightSelected:(id) sender{
+    [self dismissPopovers];
+    [_richTextView justifyRight];
 }
 
 -(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex

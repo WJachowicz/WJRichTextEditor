@@ -13,6 +13,15 @@ WJ = {
 	},
 	changeFontSize: function(fontSize){
 		document.execCommand('fontSize', false, fontSize);
+	},
+	justifyLeft: function(){
+		document.execCommand("justifyLeft");
+	},
+	justifyCenter: function(){
+		document.execCommand("justifyCenter");
+	},
+	justifyRight: function(){
+		document.execCommand("justifyRight");
 	}
 };
 /*
