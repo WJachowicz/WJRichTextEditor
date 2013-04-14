@@ -22,6 +22,12 @@ WJ = {
 	},
 	justifyRight: function(){
 		document.execCommand("justifyRight");
+	},
+	insertOrderedList: function(){
+		document.execCommand("insertOrderedList");
+	},
+	insertUnorderedList: function(){
+		document.execCommand("insertUnorderedList");
 	}
 };
 /*

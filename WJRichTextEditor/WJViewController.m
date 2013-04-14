@@ -34,44 +34,41 @@
 
 -(void) defineBarButtonItems
 {
-    NSMutableArray * items = [NSMutableArray array];
-    UIBarButtonItem * btnBold = [[UIBarButtonItem alloc] initWithTitle:@"B" style:UIBarButtonItemStyleBordered target:self action:@selector(onBoldSelected:)];
-    UIBarButtonItem * btnItalic = [[UIBarButtonItem alloc] initWithTitle:@"I" style:UIBarButtonItemStyleBordered target:self action:@selector(onItalicSelected:)];
-    UIBarButtonItem * btnUnderline = [[UIBarButtonItem alloc] initWithTitle:@"U" style:UIBarButtonItemStyleBordered target:self action:@selector(onUnderlineSelected:)];
-    UIBarButtonItem * flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem * btnFont = [[UIBarButtonItem alloc] initWithTitle:@"Font" style:UIBarButtonItemStyleBordered target:self action:@selector(onFontSelected:)];
-    UIBarButtonItem * btnSize = [[UIBarButtonItem alloc] initWithTitle:@"Size" style:UIBarButtonItemStyleBordered target:self action:@selector(onSizeSelected:)];
-    UIBarButtonItem * btnLeft = [[UIBarButtonItem alloc] initWithTitle:@"Left" style:UIBarButtonItemStyleBordered target:self action:@selector(onLeftSelected:)];
-    UIBarButtonItem * btnCenter = [[UIBarButtonItem alloc] initWithTitle:@"Center" style:UIBarButtonItemStyleBordered target:self action:@selector(onCenterSelected:)];
-    UIBarButtonItem * btnRight = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStyleBordered target:self action:@selector(onRightSelected:)];
-    
-    [items addObject:btnBold];
-    [items addObject:btnItalic];
-    [items addObject:btnUnderline];
-    
-    [items addObject:flexibleSpace];
-    
-    [items addObject:btnLeft];
-    [items addObject:btnCenter];
-    [items addObject:btnRight];
-    
-    [items addObject:flexibleSpace];
-    
-    [items addObject:btnFont];
-    [items addObject:btnSize];
-    
-    [btnBold release];
-    [btnItalic release];
-    [btnUnderline release];
-    [btnFont release];
-    [btnSize release];
-    [btnLeft release];
-    [btnCenter release];
-    [btnRight release];
-    [flexibleSpace release];
-    
-    
-    self.navigationItem.leftBarButtonItems = items;
+    @autoreleasepool {
+        NSMutableArray * items = [NSMutableArray array];
+        UIBarButtonItem * btnBold = [[[UIBarButtonItem alloc] initWithTitle:@"B" style:UIBarButtonItemStyleBordered target:self action:@selector(onBoldSelected:)] autorelease];
+        UIBarButtonItem * btnItalic = [[[UIBarButtonItem alloc] initWithTitle:@"I" style:UIBarButtonItemStyleBordered target:self action:@selector(onItalicSelected:)] autorelease];
+        UIBarButtonItem * btnUnderline = [[[UIBarButtonItem alloc] initWithTitle:@"U" style:UIBarButtonItemStyleBordered target:self action:@selector(onUnderlineSelected:)] autorelease];
+        UIBarButtonItem * btnInsertOrderedList = [[[UIBarButtonItem alloc] initWithTitle:@"ol" style:UIBarButtonItemStyleBordered target:self action:@selector(onInsertOrderedList:)] autorelease];
+        UIBarButtonItem * btnInsertUnorderedList = [[[UIBarButtonItem alloc] initWithTitle:@"ul" style:UIBarButtonItemStyleBordered target:self action:@selector(onInsertUnorderedList:)] autorelease];
+        UIBarButtonItem * flexibleSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
+        UIBarButtonItem * btnFont = [[[UIBarButtonItem alloc] initWithTitle:@"Font" style:UIBarButtonItemStyleBordered target:self action:@selector(onFontSelected:)] autorelease];
+        UIBarButtonItem * btnSize = [[[UIBarButtonItem alloc] initWithTitle:@"Size" style:UIBarButtonItemStyleBordered target:self action:@selector(onSizeSelected:)] autorelease];
+        UIBarButtonItem * btnLeft = [[[UIBarButtonItem alloc] initWithTitle:@"Left" style:UIBarButtonItemStyleBordered target:self action:@selector(onLeftSelected:)] autorelease];
+        UIBarButtonItem * btnCenter = [[[UIBarButtonItem alloc] initWithTitle:@"Center" style:UIBarButtonItemStyleBordered target:self action:@selector(onCenterSelected:)] autorelease];
+        UIBarButtonItem * btnRight = [[[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStyleBordered target:self action:@selector(onRightSelected:)] autorelease];
+        
+        [items addObject:btnBold];
+        [items addObject:btnItalic];
+        [items addObject:btnUnderline];
+        
+        [items addObject:flexibleSpace];
+        
+        [items addObject:btnInsertOrderedList];
+        [items addObject:btnInsertUnorderedList];
+        [items addObject:flexibleSpace];
+        
+        [items addObject:btnLeft];
+        [items addObject:btnCenter];
+        [items addObject:btnRight];
+        
+        [items addObject:flexibleSpace];
+        
+        [items addObject:btnFont];
+        [items addObject:btnSize];
+        
+        self.navigationItem.leftBarButtonItems = items;
+    }
 }
 
 #pragma mark - BarButtonItems actions
@@ -92,6 +89,17 @@
 {
     [self dismissPopovers];
     [_richTextView underline];
+}
+
+-(void) onInsertOrderedList:(id) sender
+{
+    [self dismissPopovers];
+    [_richTextView insertOrderedList];
+}
+-(void) onInsertUnorderedList:(id) sender
+{
+    [self dismissPopovers];
+    [_richTextView insertUnorderedList];
 }
 
 -(void) onFontSelected:(id) sender{

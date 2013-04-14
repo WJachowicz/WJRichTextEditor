@@ -70,6 +70,13 @@
 -(void) justifyRight{
     [self stringByEvaluatingJavaScriptFromString:@"WJ.justifyRight()"];
 }
+-(void) insertOrderedList{
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.insertOrderedList()"];
+}
+
+-(void) insertUnorderedList{
+    [self stringByEvaluatingJavaScriptFromString:@"WJ.insertUnorderedList()"];
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

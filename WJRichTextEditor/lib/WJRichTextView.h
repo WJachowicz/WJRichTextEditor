@@ -19,4 +19,6 @@
 -(void) justifyLeft;
 -(void) justifyCenter;
 -(void) justifyRight;
+-(void) insertOrderedList;
+-(void) insertUnorderedList;
 @end
